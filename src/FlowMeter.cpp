@@ -59,7 +59,7 @@ void FlowMeter::tick(unsigned long duration) {
     this->_totalCorrection += this->_currentCorrection * duration;          //!< accumulate corrections over time
 }
 
-void FlowMeter::count() {
+void IRAM_ATTR FlowMeter::count() {
     this->_currentPulses++;                                                 //!< this should be called from an interrupt service routine
 }
 
